@@ -192,6 +192,8 @@
             cursor: pointer;
             color: var(--dark-color);
             -webkit-tap-highlight-color: transparent;
+            z-index: 10001;
+            position: relative;
         }
 
         /* ==================== HERO SECTION ==================== */
@@ -1089,14 +1091,8 @@
 
         /* ==================== ANIMATIONS ==================== */
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
 
         /* ==================== RESPONSIVE ==================== */
@@ -1104,11 +1100,9 @@
             .hero-container {
                 gap: 40px;
             }
-
             .hero-title {
                 font-size: 48px;
             }
-
             .section-title {
                 font-size: 36px;
             }
@@ -1119,42 +1113,34 @@
                 justify-content: center;
                 text-align: center;
             }
-
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 50px;
             }
-
             .hero-image {
                 order: -1;
             }
-
             .hero-image img {
                 max-width: 400px;
             }
-
             .about-container {
                 grid-template-columns: 1fr;
                 gap: 50px;
             }
-
             .about-image-float {
                 width: 200px;
                 height: 200px;
                 bottom: -20px;
                 right: -20px;
             }
-
             .contact-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
             }
-
             .footer-about {
                 grid-column: 1 / -1;
             }
@@ -1164,23 +1150,18 @@
             .top-bar {
                 display: none;
             }
-
             nav {
                 padding: 12px 20px;
             }
-
             .logo-container img {
                 height: 55px;
             }
-
             .company-info h1 {
                 font-size: 18px;
             }
-
             .company-info span {
                 font-size: 11px;
             }
-
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -1194,154 +1175,121 @@
                 padding: 100px 30px 30px;
                 box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
                 transition: right 0.4s ease;
-                z-index: 999;
+                z-index: 10000;
                 overflow-y: auto;
                 -webkit-overflow-scrolling: touch;
             }
-
             .nav-links.active {
                 right: 0;
             }
-
             .nav-links li {
                 width: 100%;
                 padding: 20px 0;
                 border-bottom: 1px solid #f0f0f0;
             }
-
             .nav-links a {
                 font-size: 18px;
                 display: block;
             }
-
             .nav-links a::before {
                 display: none;
             }
-
             .menu-toggle {
                 display: block;
             }
-
             .hero {
                 padding-top: 100px;
                 padding-bottom: 50px;
                 min-height: auto;
             }
-
             .hero-title {
                 font-size: 36px;
             }
-
             .hero-subtitle {
                 font-size: 20px;
             }
-
             .hero-description {
                 font-size: 16px;
             }
-
             .hero-buttons {
                 flex-direction: column;
             }
-
             .btn {
                 width: 100%;
                 justify-content: center;
             }
-
             .hero-image img {
                 max-width: 300px;
             }
-
             .section-title {
                 font-size: 30px;
             }
-
             .section-subtitle {
                 font-size: 18px;
             }
-
             .features {
                 padding: 60px 20px;
             }
-
             .about {
                 padding: 60px 20px;
             }
-
             .about-image-main {
                 height: 350px;
             }
-
             .about-image-float {
                 width: 150px;
                 height: 150px;
                 bottom: -15px;
                 right: -15px;
             }
-
             .products {
                 padding: 60px 20px;
             }
-
             .products-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-
             .services {
                 padding: 60px 20px;
             }
-
             .services-grid {
                 grid-template-columns: 1fr;
             }
-
             .stats {
                 padding: 60px 20px;
             }
-
             .stats-container {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
             }
-
             .contact {
                 padding: 60px 20px;
             }
-
             .contact-form {
                 padding: 30px 25px;
             }
-
             .map-container {
                 height: 350px;
             }
-
             footer {
                 padding: 60px 20px 20px;
             }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 35px;
             }
-
             .footer-about {
                 padding-left: 0;
             }
-
             .whatsapp-float {
                 bottom: 20px;
                 left: 20px;
             }
-
             .whatsapp-float a {
                 width: 60px;
                 height: 60px;
                 font-size: 30px;
             }
-
             .scroll-top {
                 bottom: 95px;
                 right: 20px;
@@ -1355,43 +1303,33 @@
             .company-info h1 {
                 font-size: 16px;
             }
-
             .company-info span {
                 font-size: 10px;
             }
-
             .logo-container img {
                 height: 50px;
             }
-
             .hero-title {
                 font-size: 28px;
             }
-
             .hero-subtitle {
                 font-size: 18px;
             }
-
             .hero-description {
                 font-size: 15px;
             }
-
             .section-title {
                 font-size: 26px;
             }
-
             .feature-card {
                 padding: 30px 20px;
             }
-
             .stats-container {
                 grid-template-columns: 1fr;
             }
-
             .stat-number {
                 font-size: 40px;
             }
-
             .contact-form {
                 padding: 25px 20px;
             }
@@ -1402,17 +1340,14 @@
             body {
                 min-height: -webkit-fill-available;
             }
-            
             .hero {
                 min-height: -webkit-fill-available;
             }
-            
             .nav-links {
                 height: -webkit-fill-available;
             }
         }
 
-        /* Prevent zoom on input focus for iOS */
         @media screen and (max-width: 768px) {
             input[type="text"],
             input[type="tel"],
@@ -1420,6 +1355,12 @@
             textarea {
                 font-size: 16px !important;
             }
+        }
+
+        body.menu-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
         }
     </style>
 </head>
@@ -1489,22 +1430,22 @@
                 </div>
                 <h2 class="hero-title">شركة ريان الأولى</h2>
                 <p class="hero-subtitle">لاستيراد الملابس والأحذية والمنسوجات والمصنوعات الجلدية</p>
-                <p class="hero-description">
+                <p class="hero-description">‎
                     نحن شركة رائدة في مجال استيراد وتوزيع الملابس والأحذية عالية الجودة في ليبيا. نقدم أفضل المنتجات من أشهر العلامات التجارية العالمية بأسعار منافسة.
                 </p>
                 <div class="hero-buttons">
                     <a href="#products" class="btn btn-primary">
-                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-shopping-bag"></i>‎
                         تصفح المنتجات
                     </a>
                     <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone-alt"></i>‎
                         تواصل معنا
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="build.png" alt="شركة ريان الأولى" loading="eager">
+                <img src="build.png" alt="شركة ريان الأولى">
             </div>
         </div>
     </section>
@@ -1512,28 +1453,28 @@
     <!-- Features Section -->
     <section class="features">
         <div class="features-container">
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-certificate"></i>
                 </div>
                 <h3>منتجات أصلية</h3>
                 <p>جميع منتجاتنا أصلية 100% ومستوردة مباشرة من المصانع العالمية</p>
             </div>
-        <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-tags"></i>
                 </div>
                 <h3>أسعار تنافسية</h3>
                 <p>نقدم أفضل الأسعار في السوق الليبي مع عروض وخصومات مستمرة</p>
             </div>
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-shipping-fast"></i>
                 </div>
                 <h3>توصيل سريع</h3>
                 <p>خدمة توصيل سريعة وآمنة لجميع أنحاء ليبيا</p>
             </div>
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-headset"></i>
                 </div>
@@ -1546,35 +1487,35 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-container">
-            <div class="about-images fade-in">
-                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800" alt="عن الشركة" class="about-image-main" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400" alt="منتجاتنا" class="about-image-float" loading="lazy">
+            <div class="about-images">
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800" alt="عن الشركة" class="about-image-main">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400" alt="منتجاتنا" class="about-image-float">
             </div>
-            <div class="about-content fade-in">
+            <div class="about-content">
                 <span class="section-badge">من نحن</span>
                 <h2 class="section-title">شركة ريان الأولى</h2>
                 <p class="section-subtitle">رائدة في مجال استيراد الملابس والأحذية</p>
-                <p class="about-text">
+                <p class="about-text">‎
                     شركة ريان الأولى هي إحدى الشركات الرائدة في ليبيا في مجال استيراد وتوزيع الملابس والأحذية والمنسوجات والمصنوعات الجلدية. نفخر بتقديم منتجات عالية الجودة من أفضل العلامات التجارية العالمية.
                 </p>
-                <p class="about-text">
+                <p class="about-text">‎
                     نسعى دائماً لتلبية احتياجات عملائنا من خلال توفير أحدث صيحات الموضة والأزياء العصرية، مع الحفاظ على أعلى معايير الجودة والخدمة المتميزة.
                 </p>
                 <ul class="about-list">
                     <li>
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check"></i>‎
                         منتجات عالية الجودة من أفضل المصانع
                     </li>
                     <li>
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check"></i>‎
                         تشكيلة واسعة ومتنوعة لجميع الأعمار
                     </li>
                     <li>
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check"></i>‎
                         أسعار منافسة وعروض مستمرة
                     </li>
                     <li>
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check"></i>‎
                         خدمة عملاء احترافية ومتميزة
                     </li>
                 </ul>
@@ -1590,8 +1531,8 @@
             <p class="about-text">نوفر مجموعة متنوعة من الملابس والأحذية والمنسوجات عالية الجودة</p>
         </div>
         <div class="products-grid">
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600" alt="ملابس رجالية" class="product-image" loading="lazy">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600" alt="ملابس رجالية" class="product-image">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-tshirt"></i>
@@ -1600,8 +1541,8 @@
                     <p>تشكيلة واسعة من الملابس الرجالية العصرية من أفضل العلامات التجارية العالمية</p>
                 </div>
             </div>
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="ملابس نسائية" class="product-image" loading="lazy">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="ملابس نسائية" class="product-image">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-female"></i>
@@ -1610,8 +1551,8 @@
                     <p>أحدث صيحات الموضة النسائية بتصاميم عصرية وأنيقة تناسب جميع المناسبات</p>
                 </div>
             </div>
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600" alt="أحذية" class="product-image" loading="lazy">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600" alt="أحذية" class="product-image">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-shoe-prints"></i>
@@ -1620,8 +1561,8 @@
                     <p>مجموعة كبيرة من الأحذية الرجالية والنسائية بجودة عالية وتصاميم عصرية</p>
                 </div>
             </div>
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600" alt="ملابس أطفال" class="product-image" loading="lazy">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600" alt="ملابس أطفال" class="product-image">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-child"></i>
@@ -1630,8 +1571,8 @@
                     <p>ملابس أطفال مريحة وعصرية بألوان زاهية وتصاميم محببة للأطفال</p>
                 </div>
             </div>
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600" alt="منسوجات" class="product-image" loading="lazy">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600" alt="منسوجات" class="product-image">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-scroll"></i>
@@ -1640,8 +1581,8 @@
                     <p>منسوجات عالية الجودة بأنواع وألوان متعددة تناسب جميع الاحتياجات</p>
                 </div>
             </div>
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600" alt="مصنوعات جلدية" class="product-image" loading="lazy">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600" alt="مصنوعات جلدية" class="product-image">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-briefcase"></i>
@@ -1661,32 +1602,32 @@
             <p class="about-text">مجموعة شاملة من الخدمات لضمان رضا عملائنا</p>
         </div>
         <div class="services-grid">
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-number">01</div>
                 <h3>استيراد مباشر</h3>
                 <p>نستورد منتجاتنا مباشرة من أفضل المصانع العالمية لضمان الجودة والأسعار التنافسية</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-number">02</div>
                 <h3>توزيع بالجملة</h3>
                 <p>نوفر خدمة التوزيع بالجملة للتجار وأصحاب المحلات بأسعار خاصة ومميزة</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-number">03</div>
                 <h3>ضمان الجودة</h3>
                 <p>جميع منتجاتنا تخضع لفحص دقيق لضمان أعلى معايير الجودة والمتانة</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-number">04</div>
                 <h3>خدمة التوصيل</h3>
                 <p>نوفر خدمة توصيل سريعة وآمنة لجميع أنحاء ليبيا مع إمكانية الدفع عند الاستلام</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-number">05</div>
                 <h3>استشارات مجانية</h3>
                 <p>فريقنا المتخصص يقدم استشارات مجانية لمساعدتك في اختيار المنتجات المناسبة</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-number">06</div>
                 <h3>عروض خاصة</h3>
                 <p>عروض وخصومات مستمرة على مختلف المنتجات طوال العام لعملائنا الكرام</p>
@@ -1697,28 +1638,28 @@
     <!-- Stats Section -->
     <section class="stats">
         <div class="stats-container">
-            <div class="stat-item fade-in">
+            <div class="stat-item">
                 <div class="stat-icon">
                     <i class="fas fa-users"></i>
                 </div>
                 <span class="stat-number">5000+</span>
                 <div class="stat-label">عميل راضٍ</div>
             </div>
-            <div class="stat-item fade-in">
+            <div class="stat-item">
                 <div class="stat-icon">
                     <i class="fas fa-box-open"></i>
                 </div>
                 <span class="stat-number">1000+</span>
                 <div class="stat-label">منتج متنوع</div>
             </div>
-            <div class="stat-item fade-in">
+            <div class="stat-item">
                 <div class="stat-icon">
                     <i class="fas fa-award"></i>
                 </div>
                 <span class="stat-number">20+</span>
                 <div class="stat-label">سنة خبرة</div>
             </div>
-            <div class="stat-item fade-in">
+            <div class="stat-item">
                 <div class="stat-icon">
                     <i class="fas fa-truck"></i>
                 </div>
@@ -1737,7 +1678,7 @@
         </div>
         <div class="contact-container">
             <div class="contact-info">
-                <div class="contact-card fade-in">
+                <div class="contact-card">
                     <div class="contact-card-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
@@ -1749,7 +1690,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="contact-card fade-in">
+                <div class="contact-card">
                     <div class="contact-card-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
@@ -1760,7 +1701,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="contact-card fade-in">
+                <div class="contact-card">
                     <div class="contact-card-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
@@ -1769,7 +1710,7 @@
                         <p>ليبيا - زليتن<br>32°28'24.2"N 14°33'47.8"E</p>
                     </div>
                 </div>
-                <div class="contact-card fade-in">
+                <div class="contact-card">
                     <div class="contact-card-icon">
                         <i class="fab fa-whatsapp"></i>
                     </div>
@@ -1782,7 +1723,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-form fade-in">
+            <div class="contact-form">
                 <h3>أرسل لنا رسالة</h3>
                 <form id="contactForm">
                     <div class="form-group">
@@ -1820,7 +1761,7 @@
                     <img src="logo.png" alt="شركة ريان الأولى">
                     <div class="footer-logo-text">ريان الأولى</div>
                 </div>
-                <p>
+                <p>‎
                     شركة رائدة في مجال استيراد وتوزيع الملابس والأحذية والمنسوجات والمصنوعات الجلدية في ليبيا. نقدم أفضل المنتجات بأعلى جودة وأفضل الأسعار.
                 </p>
                 <div class="social-links">
@@ -1875,44 +1816,58 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        console.log('Script loaded successfully');
+
+        // Mobile Menu Toggle - محسّن
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
+        const body = document.body;
 
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            const icon = this.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const isActive = navLinks.classList.contains('active');
+                
+                if (isActive) {
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    this.querySelector('i').classList.remove('fa-times');
+                    this.querySelector('i').classList.add('fa-bars');
+                } else {
+                    navLinks.classList.add('active');
+                    body.classList.add('menu-open');
+                    this.querySelector('i').classList.remove('fa-bars');
+                    this.querySelector('i').classList.add('fa-times');
+                }
             });
-        });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = navLinks.contains(event.target);
-            const isClickOnToggle = menuToggle.contains(event.target);
-            
-            if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
+            // Close menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navLinks.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
 
         // Header Scroll Effect
         const header = document.getElementById('header');
@@ -1974,24 +1929,6 @@
                     });
                 }
             });
-        });
-
-        // Fade In Animation on Scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        fadeElements.forEach(element => {
-            fadeInObserver.observe(element);
         });
 
         // Counter Animation for Stats
@@ -2059,19 +1996,6 @@
             });
         }
 
-        // Lazy Loading Images
-        if ('loading' in HTMLImageElement.prototype) {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.src = img.src;
-            });
-        } else {
-            // Fallback for browsers that don't support lazy loading
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-            document.body.appendChild(script);
-        }
-
         // Prevent iOS Safari zoom on input focus
         if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             const viewportMeta = document.querySelector('meta[name="viewport"]');
@@ -2081,19 +2005,6 @@
             }
         }
 
-        // Performance optimization - Debounce scroll events
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
         // Console branding
         console.log('%c شركة ريان الأولى ', 'background: #8B4513; color: white; font-size: 20px; padding: 10px; font-weight: bold;');
         console.log('%c لاستيراد الملابس والأحذية والمنسوجات ', 'background: #2C1810; color: white; font-size: 16px; padding: 8px;');
@@ -2101,9 +2012,9 @@
 
         // Accessibility improvements
         document.addEventListener('keydown', function(e) {
-            // Close mobile menu with Escape key
             if (e.key === 'Escape' && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
                 const icon = menuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
@@ -2114,20 +2025,22 @@
         let touchStartX = 0;
         let touchEndX = 0;
 
-        navLinks.addEventListener('touchstart', function(e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
+        if (navLinks) {
+            navLinks.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
 
-        navLinks.addEventListener('touchend', function(e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
+            navLinks.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
 
         function handleSwipe() {
             if (touchEndX < touchStartX - 50) {
-                // Swipe left - close menu
                 if (navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
                     const icon = menuToggle.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
@@ -2135,27 +2048,9 @@
             }
         }
 
-        // Prevent body scroll when mobile menu is open
-        const body = document.body;
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                if (mutation.attributeName === 'class') {
-                    if (navLinks.classList.contains('active')) {
-                        body.style.overflow = 'hidden';
-                    } else {
-                        body.style.overflow = '';
-                    }
-                }
-            });
-        });
-
-        observer.observe(navLinks, {
-            attributes: true
-        });
-
         // Add active state to navigation based on scroll position
         const sections = document.querySelectorAll('section[id]');
-        
+
         function highlightNavigation() {
             const scrollY = window.pageYOffset;
             
@@ -2176,33 +2071,38 @@
             });
         }
 
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
         window.addEventListener('scroll', debounce(highlightNavigation, 100));
 
         // Initialize on page load
         window.addEventListener('load', function() {
-            // Trigger fade-in animations for elements in viewport
-            fadeElements.forEach(element => {
-                const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    element.classList.add('visible');
-                }
-            });
-
-            // Set initial navigation highlight
             highlightNavigation();
+            console.log('Page fully loaded');
+            console.log('Menu toggle:', menuToggle);
+            console.log('Nav links:', navLinks);
         });
 
         // Handle orientation change for mobile devices
         window.addEventListener('orientationchange', function() {
-            // Close mobile menu on orientation change
-            if (navLinks.classList.contains('active')) {
+            if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
                 const icon = menuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
             
-            // Recalculate positions after orientation change
             setTimeout(function() {
                 highlightNavigation();
             }, 300);
@@ -2210,7 +2110,7 @@
 
         // Optimize scroll performance
         let ticking = false;
-        
+
         window.addEventListener('scroll', function() {
             if (!ticking) {
                 window.requestAnimationFrame(function() {
@@ -2253,7 +2153,6 @@
         const phoneInput = document.getElementById('phone');
         if (phoneInput) {
             phoneInput.addEventListener('input', function(e) {
-                // Allow only numbers and common phone characters
                 this.value = this.value.replace(/[^\\d+\\-\\s()]/g, '');
             });
         }
@@ -2307,42 +2206,30 @@
             });
         });
 
-        // Service Worker registration for PWA (optional)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                // Uncomment to enable service worker
-                // navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                //     console.log('ServiceWorker registration successful');
-                // }, function(err) {
-                //     console.log('ServiceWorker registration failed: ', err);
-                // });
-            });
-        }
-
         // Add print styles handler
         window.addEventListener('beforeprint', function() {
-            navLinks.classList.remove('active');
+            if (navLinks) {
+                navLinks.classList.remove('active');
+            }
         });
 
         // Handle visibility change (tab switching)
         document.addEventListener('visibilitychange', function() {
+            const heroImg = document.querySelector('.hero-image img');
             if (document.hidden) {
-                // Pause animations when tab is not visible
-                document.querySelectorAll('.hero-image img').forEach(img => {
-                    img.style.animationPlayState = 'paused';
-                });
+                if (heroImg) {
+                    heroImg.style.animationPlayState = 'paused';
+                }
             } else {
-                // Resume animations when tab is visible
-                document.querySelectorAll('.hero-image img').forEach(img => {
-                    img.style.animationPlayState = 'running';
-                });
+                if (heroImg) {
+                    heroImg.style.animationPlayState = 'running';
+                }
             }
         });
 
         // Error handling for images
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
-                this.style.display = 'none';
                 console.warn('Failed to load image:', this.src);
             });
         });
@@ -2358,7 +2245,7 @@
             document.body.classList.remove('keyboard-navigation');
         });
 
-        // Performance monitoring (optional)
+        // Performance monitoring
         if (window.performance && window.performance.timing) {
             window.addEventListener('load', function() {
                 setTimeout(function() {
@@ -2369,6 +2256,55 @@
             });
         }
 
+        // Force show all content on load (fix for server issues)
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM Content Loaded');
+            
+            // Force display all sections
+            const allSections = document.querySelectorAll('section');
+            allSections.forEach(section => {
+                section.style.opacity = '1';
+                section.style.visibility = 'visible';
+            });
+
+            // Force display all cards
+            const allCards = document.querySelectorAll('.feature-card, .product-card, .service-card, .contact-card, .stat-item');
+            allCards.forEach(card => {
+                card.style.opacity = '1';
+                card.style.visibility = 'visible';
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Backup scroll handler
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                const allElements = document.querySelectorAll('.feature-card, .product-card, .service-card, .about-content, .about-images');
+                allElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                    
+                    if (rect.top <= windowHeight * 0.75) {
+                        element.style.opacity = '1';
+                        element.style.visibility = 'visible';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }, 50);
+        }, { passive: true });
+
+        // Immediate visibility fix
+        setTimeout(function() {
+            document.body.style.opacity = '1';
+            const allContent = document.querySelectorAll('*');
+            allContent.forEach(el => {
+                if (el.style.opacity === '0') {
+                    el.style.opacity = '1';
+                }
+            });
+        }, 100);
     </script>
 </body>
 </html>
