@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>شركة ريان الأولى - استيراد الملابس والأحذية والمنسوجات</title>
     
     <!-- Preconnect -->
@@ -42,7 +42,7 @@
         html {
             scroll-behavior: smooth;
             height: 100%;
-            height: -webkit-fill-available;
+            -webkit-text-size-adjust: 100%;
         }
 
         body {
@@ -52,71 +52,8 @@
             overflow-x: hidden;
             line-height: 1.7;
             min-height: 100vh;
-            min-height: -webkit-fill-available;
-        }
-
-        /* ==================== LOADER ==================== */
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 99999;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        .loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .loader-content {
-            text-align: center;
-        }
-
-        .loader-logo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 30px;
-            animation: logoFloat 2s ease-in-out infinite;
-        }
-
-        .loader-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.3));
-        }
-
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .loader-spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top-color: var(--white);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .loader-text {
-            font-size: 22px;
-            color: var(--white);
-            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* ==================== HEADER ==================== */
@@ -127,6 +64,7 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -253,12 +191,12 @@
             font-size: 30px;
             cursor: pointer;
             color: var(--dark-color);
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* ==================== HERO SECTION ==================== */
         .hero {
             min-height: 100vh;
-            min-height: -webkit-fill-available;
             background: var(--gradient-2);
             position: relative;
             overflow: hidden;
@@ -311,6 +249,7 @@
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 10px 25px;
             border-radius: 50px;
             font-size: 14px;
@@ -359,6 +298,7 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-primary {
@@ -889,6 +829,8 @@
             font-size: 16px;
             font-family: 'Tajawal', sans-serif;
             transition: all 0.3s ease;
+            -webkit-appearance: none;
+            appearance: none;
         }
 
         .form-group input:focus,
@@ -914,6 +856,7 @@
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .submit-btn:hover {
@@ -1002,6 +945,7 @@
             font-size: 20px;
             text-decoration: none;
             transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .social-links a:hover {
@@ -1045,6 +989,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .footer-links a:hover {
@@ -1092,6 +1037,7 @@
             box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
             transition: all 0.3s ease;
             animation: pulse 2s infinite;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .whatsapp-float a:hover {
@@ -1128,6 +1074,7 @@
             transition: all 0.3s ease;
             z-index: 999;
             box-shadow: 0 5px 20px rgba(139, 69, 19, 0.4);
+            -webkit-tap-highlight-color: transparent;
         }
 
         .scroll-top.active {
@@ -1241,7 +1188,6 @@
                 width: 80%;
                 max-width: 350px;
                 height: 100vh;
-                height: -webkit-fill-available;
                 background: var(--white);
                 flex-direction: column;
                 gap: 0;
@@ -1249,6 +1195,8 @@
                 box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
                 transition: right 0.4s ease;
                 z-index: 999;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             .nav-links.active {
@@ -1277,6 +1225,7 @@
             .hero {
                 padding-top: 100px;
                 padding-bottom: 50px;
+                min-height: auto;
             }
 
             .hero-title {
@@ -1448,25 +1397,42 @@
             }
         }
 
-        /* iOS Safari specific fixes */
+        /* ==================== iOS SAFARI FIXES ==================== */
         @supports (-webkit-touch-callout: none) {
+            body {
+                min-height: -webkit-fill-available;
+            }
+            
             .hero {
                 min-height: -webkit-fill-available;
+            }
+            
+            .nav-links {
+                height: -webkit-fill-available;
+            }
+        }
+
+        /* Prevent zoom on input focus for iOS */
+        @media screen and (max-width: 768px) {
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            textarea {
+                font-size: 16px !important;
             }
         }
     </style>
 </head>
 <body>
-
     <!-- WhatsApp Float Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/218911366714" target="_blank" title="تواصل معنا عبر واتساب">
+        <a href="https://wa.me/218911366714" target="_blank" rel="noopener noreferrer" title="تواصل معنا عبر واتساب" aria-label="واتساب">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top" id="scrollTop">
+    <div class="scroll-top" id="scrollTop" role="button" aria-label="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
     </div>
 
@@ -1481,6 +1447,10 @@
                 <div class="top-bar-item">
                     <i class="fas fa-phone-alt"></i>
                     <a href="tel:+218914166970">0914166970</a>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@alrayan.com.ly">info@alrayan.com.ly</a>
                 </div>
                 <div class="top-bar-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -1503,7 +1473,7 @@
                 <li><a href="#services">الخدمات</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
-            <div class="menu-toggle" id="menuToggle">
+            <div class="menu-toggle" id="menuToggle" role="button" aria-label="القائمة">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
@@ -1534,7 +1504,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="build.png" alt="شركة ريان الأولى">
+                <img src="build.png" alt="شركة ريان الأولى" loading="eager">
             </div>
         </div>
     </section>
@@ -1549,7 +1519,7 @@
                 <h3>منتجات أصلية</h3>
                 <p>جميع منتجاتنا أصلية 100% ومستوردة مباشرة من المصانع العالمية</p>
             </div>
-            <div class="feature-card fade-in">
+        <div class="feature-card fade-in">
                 <div class="feature-icon">
                     <i class="fas fa-tags"></i>
                 </div>
@@ -1577,8 +1547,8 @@
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-images fade-in">
-                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800" alt="عن الشركة" class="about-image-main">
-                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400" alt="منتجاتنا" class="about-image-float">
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800" alt="عن الشركة" class="about-image-main" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400" alt="منتجاتنا" class="about-image-float" loading="lazy">
             </div>
             <div class="about-content fade-in">
                 <span class="section-badge">من نحن</span>
@@ -1621,7 +1591,7 @@
         </div>
         <div class="products-grid">
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600" alt="ملابس رجالية" class="product-image">
+                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600" alt="ملابس رجالية" class="product-image" loading="lazy">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-tshirt"></i>
@@ -1631,7 +1601,7 @@
                 </div>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="ملابس نسائية" class="product-image">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="ملابس نسائية" class="product-image" loading="lazy">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-female"></i>
@@ -1641,7 +1611,7 @@
                 </div>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600" alt="أحذية" class="product-image">
+                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600" alt="أحذية" class="product-image" loading="lazy">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-shoe-prints"></i>
@@ -1651,7 +1621,7 @@
                 </div>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600" alt="ملابس أطفال" class="product-image">
+                <img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600" alt="ملابس أطفال" class="product-image" loading="lazy">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-child"></i>
@@ -1661,7 +1631,7 @@
                 </div>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600" alt="منسوجات" class="product-image">
+                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600" alt="منسوجات" class="product-image" loading="lazy">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-scroll"></i>
@@ -1671,7 +1641,7 @@
                 </div>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600" alt="مصنوعات جلدية" class="product-image">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600" alt="مصنوعات جلدية" class="product-image" loading="lazy">
                 <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-briefcase"></i>
@@ -1781,6 +1751,17 @@
                 </div>
                 <div class="contact-card fade-in">
                     <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <h3>البريد الإلكتروني</h3>
+                        <p>
+                            <a href="mailto:info@alrayan.com.ly">info@alrayan.com.ly</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="contact-card-content">
@@ -1795,8 +1776,8 @@
                     <div class="contact-card-content">
                         <h3>واتساب</h3>
                         <p>
-                            <a href="https://wa.me/218911366714" target="_blank">0911366714</a><br>
-                            <a href="https://wa.me/218914166970" target="_blank">0914166970</a>
+                            <a href="https://wa.me/218911366714" target="_blank" rel="noopener noreferrer">0911366714</a><br>
+                            <a href="https://wa.me/218914166970" target="_blank" rel="noopener noreferrer">0914166970</a>
                         </p>
                     </div>
                 </div>
@@ -1806,11 +1787,11 @@
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">الاسم الكامل</label>
-                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل" autocomplete="name">
                     </div>
                     <div class="form-group">
                         <label for="phone">رقم الهاتف</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="أدخل رقم هاتفك">
+                        <input type="tel" id="phone" name="phone" required placeholder="أدخل رقم هاتفك" autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label for="message">الرسالة</label>
@@ -1827,7 +1808,7 @@
     <!-- Map Section -->
     <section class="map-section">
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.8!2d14.563277777777778!3d32.473388888888886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDI4JzI0LjIiTiAxNMKwMzMnNDcuOCJF!5e0!3m2!1sar!2sly!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.8!2d14.563277777777778!3d32.473388888888886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDI4JzI0LjIiTiAxNMKwMzMnNDcuOCJF!5e0!3m2!1sar!2sly!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع شركة ريان الأولى"></iframe>
         </div>
     </section>
 
@@ -1843,16 +1824,16 @@
                     شركة رائدة في مجال استيراد وتوزيع الملابس والأحذية والمنسوجات والمصنوعات الجلدية في ليبيا. نقدم أفضل المنتجات بأعلى جودة وأفضل الأسعار.
                 </p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com" target="_blank" title="فيسبوك">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="فيسبوك" aria-label="فيسبوك">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://wa.me/218911366714" target="_blank" title="واتساب">
+                    <a href="https://wa.me/218911366714" target="_blank" rel="noopener noreferrer" title="واتساب" aria-label="واتساب">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" title="انستغرام">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="انستغرام" aria-label="انستغرام">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.twitter.com" target="_blank" title="تويتر">
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" title="تويتر" aria-label="تويتر">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -1870,11 +1851,11 @@
             <div class="footer-section">
                 <h3>منتجاتنا</h3>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> ملابس رجالية</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> ملابس نسائية</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> ملابس أطفال</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> أحذية متنوعة</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i> مصنوعات جلدية</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> ملابس رجالية</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> ملابس نسائية</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> ملابس أطفال</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> أحذية متنوعة</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> مصنوعات جلدية</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1882,8 +1863,9 @@
                 <ul class="footer-links">
                     <li><a href="tel:+218911366714"><i class="fas fa-phone"></i> 0911366714</a></li>
                     <li><a href="tel:+218914166970"><i class="fas fa-phone"></i> 0914166970</a></li>
-                    <li><a href="https://wa.me/218911366714"><i class="fab fa-whatsapp"></i> واتساب</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> ليبيا - زليتن</a></li>
+                    <li><a href="mailto:info@alrayan.com.ly"><i class="fas fa-envelope"></i> info@alrayan.com.ly</a></li>
+                    <li><a href="https://wa.me/218911366714" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> واتساب</a></li>
+                    <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> ليبيا - زليتن</a></li>
                 </ul>
             </div>
         </div>
@@ -1891,13 +1873,8 @@
             <p>&copy; 2025 شركة ريان الأولى. جميع الحقوق محفوظة</p>
         </div>
     </footer>
- 
-    <script>
-        // Loader
-        window.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('loader').classList.add('hidden');
-});
 
+    <script>
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
@@ -1928,6 +1905,7 @@
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navLinks.contains(event.target);
             const isClickOnToggle = menuToggle.contains(event.target);
+            
             if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 const icon = menuToggle.querySelector('i');
@@ -1938,18 +1916,25 @@
 
         // Header Scroll Effect
         const header = document.getElementById('header');
+        let lastScroll = 0;
+
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
+            
+            lastScroll = currentScroll;
         });
 
         // Scroll to Top Button
         const scrollTopBtn = document.getElementById('scrollTop');
+
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
+            if (window.pageYOffset > 300) {
                 scrollTopBtn.classList.add('active');
             } else {
                 scrollTopBtn.classList.remove('active');
@@ -1963,14 +1948,26 @@
             });
         });
 
-        // Smooth Scrolling
+        // Smooth Scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+                
+                if (href === '#' || href === '#home') {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    return;
+                }
+                
+                const target = document.querySelector(href);
                 if (target) {
+                    e.preventDefault();
                     const headerHeight = header.offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -1979,8 +1976,9 @@
             });
         });
 
-        // Fade In Animation
+        // Fade In Animation on Scroll
         const fadeElements = document.querySelectorAll('.fade-in');
+        
         const fadeInObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1996,7 +1994,7 @@
             fadeInObserver.observe(element);
         });
 
-        // Counter Animation
+        // Counter Animation for Stats
         const statNumbers = document.querySelectorAll('.stat-number');
         let hasAnimated = false;
 
@@ -2017,6 +2015,7 @@
                     element.textContent = target + suffix;
                 }
             };
+
             updateCounter();
         };
 
@@ -2038,11 +2037,13 @@
             statsObserver.observe(statsSection);
         }
 
-        // Contact Form
+        // Contact Form Submission
         const contactForm = document.getElementById('contactForm');
+        
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
+                
                 const name = document.getElementById('name').value;
                 const phone = document.getElementById('phone').value;
                 const message = document.getElementById('message').value;
@@ -2051,36 +2052,323 @@
                 const whatsappURL = \`https://wa.me/218911366714?text=\${whatsappMessage}\`;
                 
                 window.open(whatsappURL, '_blank');
+                
                 contactForm.reset();
+                
+                alert('شكراً لتواصلك معنا! سيتم توجيهك إلى واتساب.');
             });
         }
 
-        // Image Loading
-        document.querySelectorAll('img').forEach(img => {
-            img.style.transition = 'opacity 0.5s ease';
-            if (img.complete && img.naturalHeight !== 0) {
-                img.style.opacity = '1';
-            } else {
-                img.style.opacity = '0';
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
+        // Lazy Loading Images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+
+        // Prevent iOS Safari zoom on input focus
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            const viewportMeta = document.querySelector('meta[name="viewport"]');
+            if (viewportMeta) {
+                let content = viewportMeta.getAttribute('content');
+                viewportMeta.setAttribute('content', content + ', maximum-scale=1.0');
+            }
+        }
+
+        // Performance optimization - Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Console branding
+        console.log('%c شركة ريان الأولى ', 'background: #8B4513; color: white; font-size: 20px; padding: 10px; font-weight: bold;');
+        console.log('%c لاستيراد الملابس والأحذية والمنسوجات ', 'background: #2C1810; color: white; font-size: 16px; padding: 8px;');
+        console.log('%c 📞 0911366714 | 0914166970 ', 'background: #D2691E; color: white; font-size: 14px; padding: 6px;');
+
+        // Accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            // Close mobile menu with Escape key
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Handle touch events for better mobile experience
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        navLinks.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        navLinks.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left - close menu
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
+
+        // Prevent body scroll when mobile menu is open
+        const body = document.body;
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'class') {
+                    if (navLinks.classList.contains('active')) {
+                        body.style.overflow = 'hidden';
+                    } else {
+                        body.style.overflow = '';
+                    }
+                }
+            });
+        });
+
+        observer.observe(navLinks, {
+            attributes: true
+        });
+
+        // Add active state to navigation based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        
+        function highlightNavigation() {
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 150;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(\`.nav-links a[href="#\${sectionId}"]\`);
+                
+                if (navLink && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.style.color = '';
+                    });
+                    navLink.style.color = 'var(--primary-color)';
+                } else if (navLink) {
+                    navLink.style.color = '';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', debounce(highlightNavigation, 100));
+
+        // Initialize on page load
+        window.addEventListener('load', function() {
+            // Trigger fade-in animations for elements in viewport
+            fadeElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+
+            // Set initial navigation highlight
+            highlightNavigation();
+        });
+
+        // Handle orientation change for mobile devices
+        window.addEventListener('orientationchange', function() {
+            // Close mobile menu on orientation change
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+            
+            // Recalculate positions after orientation change
+            setTimeout(function() {
+                highlightNavigation();
+            }, 300);
+        });
+
+        // Optimize scroll performance
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    ticking = false;
                 });
-                setTimeout(() => {
-                    img.style.opacity = '1';
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Add loading state to form button
+        if (contactForm) {
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            contactForm.addEventListener('submit', function() {
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+                submitBtn.disabled = true;
+                
+                setTimeout(function() {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
                 }, 2000);
+            });
+        }
+
+        // Email validation
+        const emailInputs = document.querySelectorAll('input[type="email"]');
+        emailInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+                if (this.value && !emailRegex.test(this.value)) {
+                    this.style.borderColor = '#ff0000';
+                } else {
+                    this.style.borderColor = '';
+                }
+            });
+        });
+
+        // Phone validation
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                // Allow only numbers and common phone characters
+                this.value = this.value.replace(/[^\\d+\\-\\s()]/g, '');
+            });
+        }
+
+        // Smooth reveal for hero section
+        window.addEventListener('load', function() {
+            const heroContent = document.querySelector('.hero-content');
+            const heroImage = document.querySelector('.hero-image');
+            
+            if (heroContent) {
+                heroContent.style.opacity = '0';
+                heroContent.style.transform = 'translateY(30px)';
+                
+                setTimeout(function() {
+                    heroContent.style.transition = 'all 0.8s ease';
+                    heroContent.style.opacity = '1';
+                    heroContent.style.transform = 'translateY(0)';
+                }, 100);
+            }
+            
+            if (heroImage) {
+                heroImage.style.opacity = '0';
+                heroImage.style.transform = 'translateX(-30px)';
+                
+                setTimeout(function() {
+                    heroImage.style.transition = 'all 0.8s ease';
+                    heroImage.style.opacity = '1';
+                    heroImage.style.transform = 'translateX(0)';
+                }, 300);
+            }
+        });
+
+        // Add ripple effect to buttons
+        const buttons = document.querySelectorAll('.btn, .submit-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Service Worker registration for PWA (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Uncomment to enable service worker
+                // navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                //     console.log('ServiceWorker registration successful');
+                // }, function(err) {
+                //     console.log('ServiceWorker registration failed: ', err);
+                // });
+            });
+        }
+
+        // Add print styles handler
+        window.addEventListener('beforeprint', function() {
+            navLinks.classList.remove('active');
+        });
+
+        // Handle visibility change (tab switching)
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // Pause animations when tab is not visible
+                document.querySelectorAll('.hero-image img').forEach(img => {
+                    img.style.animationPlayState = 'paused';
+                });
+            } else {
+                // Resume animations when tab is visible
+                document.querySelectorAll('.hero-image img').forEach(img => {
+                    img.style.animationPlayState = 'running';
+                });
             }
         });
 
         // Error handling for images
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
-                this.style.opacity = '1';
+                this.style.display = 'none';
+                console.warn('Failed to load image:', this.src);
             });
         });
 
-        // Console message
-        console.log('%c شركة ريان الأولى ', 'background: #8B4513; color: white; font-size: 20px; padding: 10px;');
-        console.log('%c لاستيراد الملابس والأحذية والمنسوجات ', 'background: #2C1810; color: white; font-size: 16px; padding: 8px;');
+        // Add focus visible for accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Performance monitoring (optional)
+        if (window.performance && window.performance.timing) {
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const perfData = window.performance.timing;
+                    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                    console.log('Page load time:', pageLoadTime + 'ms');
+                }, 0);
+            });
+        }
+
     </script>
 </body>
 </html>
