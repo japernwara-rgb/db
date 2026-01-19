@@ -1901,14 +1901,12 @@
             <p>&copy; 2025 شركة ريان الأولى. جميع الحقوق محفوظة</p>
         </div>
     </footer>
-
+ 
     <script>
         // Loader
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loader').classList.add('hidden');
-            }, 800);
-        });
+        window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('loader').classList.add('hidden');
+});
 
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
